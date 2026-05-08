@@ -1,15 +1,18 @@
 # Pygame importieren 
 import pygame 
 
+from score import ScoreCard
+
 class Player:
-    def __init__(self, name): # Konstruktor
+    def __init__(self, name):
         self.name = name
-        self.score = 0
+        self.rolls_left = 3
+        self.scorecard = ScoreCard()
+
+    def reset_rolls(self):
         self.rolls_left = 3
 
-    # Methoden
-    def roll_dice():
-        pass
-
-    def choose_category():
-        pass
+    def roll_dice(self, cup):
+        if self.rolls_left > 0:
+            cup.roll_unheld()
+            self.rolls_left -= 1

@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="Seite-1" id="ZLVEtawI9InQLgzOmbnw">
-    <mxGraphModel dx="1069" dy="744" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1084" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -111,9 +111,6 @@
             <mxPoint x="240" y="330" as="sourcePoint" />
             <mxPoint x="400" y="330" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="VeA59cS7pZuMiDmuFntr-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Oberfläche generieren und so" vertex="1">
-          <mxGeometry height="30" width="200" x="60" y="500" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
