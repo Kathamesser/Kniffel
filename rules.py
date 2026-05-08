@@ -18,7 +18,7 @@ class Rules:
         if category == "kniffel":
             return 50 if len(set(d)) == 1 else 0 # alle gleich
 
-        if category == "full":
+        if category == "fullhouse":
             return 25 if sorted(Counter(d).values()) == [2, 3] else 0
 
         return 0

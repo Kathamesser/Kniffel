@@ -1,13 +1,10 @@
-# Pygame importieren 
-import pygame 
-
-from score import ScoreCard
+from score import Score
 
 class Player:
     def __init__(self, name):
         self.name = name
         self.rolls_left = 3
-        self.scorecard = ScoreCard()
+        self.scorecard = Score()
 
     def reset_rolls(self):
         self.rolls_left = 3

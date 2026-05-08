@@ -13,18 +13,18 @@ class Cup():
     # Methoden 
     def roll_all(self): # Erster Zug mit allen Würfeln 
         for d in self.dice:
-            d.held = False # Alle Würfel sind frei
-            d.roll() # Alle Würfel werfen 
+            d.held = False # Alle Würfel sind frei (kein Würfel ist gehalten)
+            d.roll() # Alle Würfel werfen (neue Zufallswerte setzen)
 
     def roll_unheld(self): # Zweiter und dritter Zug mit den übrigen Würfeln 
         for d in self.dice:
-            d.roll()
+            d.roll() # Nur Würfel werfen, die nicht gehalten werden
     
     def get_values(self):
-        return [d.value for d in self.dice]
-
+        return [d.value for d in self.dice] # Gibt alle aktuellen Würfelwerte als Liste zurück
+    
     def reset(self):
         for d in self.dice:
-            d.held = False
+            d.held = False # Setzt alle Würfel zurück, keiner wird mehr gehalten 
 
     

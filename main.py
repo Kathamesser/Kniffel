@@ -18,7 +18,37 @@ rules = Rules() # Regeln
 score = Score() # Score
 
 # Spielvariablen
-categories = ["ones","twos","threes","fours","fives","sixes","full","kniffel","chance"]
+categories = [
+    "ones",
+    "twos",
+    "threes",
+    "fours",
+    "fives",
+    "sixes",
+    "three_of_a_kind",
+    "four_of_a_kind",
+    "fullhouse",
+    "small_straight",
+    "large_straight",
+    "kniffel",
+    "chance",
+]
+category_keys = [
+    pygame.K_1,
+    pygame.K_2,
+    pygame.K_3,
+    pygame.K_4,
+    pygame.K_5,
+    pygame.K_6,
+    pygame.K_7,
+    pygame.K_8,
+    pygame.K_9,
+    pygame.K_q,
+    pygame.K_w,
+    pygame.K_e,
+    pygame.K_r,
+]
+category_labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "Q", "W", "E", "R"]
 rolls_left = 3 # Würfe pro Runde
 
 running = True # Hauptschleife
@@ -60,8 +90,8 @@ while running:
                 roll_dice() # würfeln
 
             # Kategorie wählen
-            if pygame.K_1 <= event.key <= pygame.K_9:
-                idx = event.key - pygame.K_1
+            if event.key in category_keys:
+                idx = category_keys.index(event.key)
 
                 if idx < len(categories):
                     cat = categories[idx]
@@ -92,7 +122,7 @@ while running:
 
     # Kategorien anzeigen
     for i, c in enumerate(categories):
-        text = font.render(f"{i+1}:{c}", True, (200,200,200))
+        text = font.render(f"{category_labels[i]}:{c}", True, (200,200,200))
         window.blit(text, (350, 150 + i * 25))
 
     pygame.display.update() # Bildschirm aktualisieren
